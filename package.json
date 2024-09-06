@@ -7,7 +7,6 @@
     "dev": "NEXT_PUBLIC_CLOUD_MODE=false next dev -p 3005",
     "dev:cloud": "NEXT_PUBLIC_CLOUD_MODE=true next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "eslint --fix .",
     "lint:verbose": "eslint --config .eslintrc.verbose.json .",
