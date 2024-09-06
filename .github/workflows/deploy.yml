@@ -32,11 +32,11 @@ jobs:
         run: "npm install"
 
       - name: Build step
-        run: "npm run build"
+        run: "npm run build && npm run export"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "hujiawei-r2r"
-          entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: ".next"
+          entrypoint: "out/index.html"
+          root: "out"
