@@ -29,14 +29,14 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "curl -fsSL https://get.pnpm.io/install.sh | sh - && pnpm install"
+        run: "pnpm install"
 
       - name: Build step
-        run: "pnpm build "
+        run: "pnpm run build"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "hujiawei-r2r"
           entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: "out"
+          root: ""
